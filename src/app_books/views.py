@@ -5,6 +5,9 @@ from django.urls import reverse
 from .models import Book
 
 
+def home(request):
+    return render(request, 'home.html')
+
 def book_list(request: HttpRequest) -> HttpResponse:
     """Render a page with a list of all books."""
     books = Book.objects.all()
